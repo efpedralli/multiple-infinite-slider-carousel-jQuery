@@ -1,0 +1,87 @@
+:root
+{
+  --carousel_jquery-width: 100%;
+  --carousel_jquery-height: auto;
+}
+.wrap_jquery {
+  position: relative;
+  width: var(--carousel_jquery-width);
+  height: var(--carousel_jquery-height);
+  margin: 0 auto;
+}
+.window_jquery {
+  overflow: hidden;
+  position: relative;
+}
+.carousel_jquery {
+  width: 10000px;
+  position: relative;
+  top: 0; 
+  left: -930px;
+  max-width: unset;
+}
+.slide_jquery{
+  max-width: 100vw;
+  cursor: pointer;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+}
+#carousel_jquery .slide_jquery {
+  height: var(--carousel_jquery-height);
+  width: 930px;    
+}
+#carousel_jquery2{
+  left: -300px;
+}
+#carousel_jquery2 .slide_jquery {
+  height: var(--carousel_jquery-height);
+  width: 300px;
+}
+
+.prev_jquery, .next_jquery {
+  cursor: pointer;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  font-size: 14pt;
+}
+.prev_jquery { left: -100 }
+.next_jquery { right: -100 }
+.transition {
+  transition: 0.7s;
+  transition-timing-function: ease-in-out;
+}
+.prev_jquery img, .next_jquery img{
+  width: 40px;
+}
+
+@media screen and (orientation:portrait){
+  .prev_jquery img, .next_jquery img{
+    width: 35px !important;
+  }
+  #prev_carousel_jquery { 
+    bottom: 90%;
+    left: -25 !important 
+  }
+  #next_carousel_jquery {
+    bottom: 90%; 
+    right: -25 !important
+  }
+  #window_jquery2{
+    width: 80%;
+    margin: auto;
+  }
+  #prev_carousel_jquery2{
+    left: -25 !important 
+  }
+  #next_carousel_jquery2{
+    right: -25 !important
+  }
+
+}
